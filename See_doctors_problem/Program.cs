@@ -16,7 +16,7 @@ namespace See_doctors_problem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new See_doctors_problem());
         }
     }
 }
