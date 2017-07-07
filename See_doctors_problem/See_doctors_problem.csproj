@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>head.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -88,22 +91,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\chair.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\switch.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wait.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\wait_patient.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\work.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="head.ico" />
+    <None Include="Resources\chair.png" />
+    <None Include="Resources\work.png" />
+    <None Include="Resources\wait_patient.png" />
+    <None Include="Resources\wait.png" />
+    <None Include="Resources\switch.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

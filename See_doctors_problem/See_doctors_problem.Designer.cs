@@ -30,10 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(See_doctors_problem));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.doctor3 = new System.Windows.Forms.PictureBox();
-            this.doctor2 = new System.Windows.Forms.PictureBox();
-            this.doctor1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.warning = new System.Windows.Forms.PictureBox();
             this.patient10 = new System.Windows.Forms.PictureBox();
             this.patient9 = new System.Windows.Forms.PictureBox();
             this.patient8 = new System.Windows.Forms.PictureBox();
@@ -44,13 +43,12 @@
             this.patient3 = new System.Windows.Forms.PictureBox();
             this.patient2 = new System.Windows.Forms.PictureBox();
             this.patient1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.warning = new System.Windows.Forms.PictureBox();
+            this.doctor3 = new System.Windows.Forms.PictureBox();
+            this.doctor2 = new System.Windows.Forms.PictureBox();
+            this.doctor1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient8)).BeginInit();
@@ -61,7 +59,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.patient3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -76,30 +76,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Doctors";
-            // 
-            // doctor3
-            // 
-            this.doctor3.Location = new System.Drawing.Point(628, 23);
-            this.doctor3.Name = "doctor3";
-            this.doctor3.Size = new System.Drawing.Size(250, 80);
-            this.doctor3.TabIndex = 2;
-            this.doctor3.TabStop = false;
-            // 
-            // doctor2
-            // 
-            this.doctor2.Location = new System.Drawing.Point(370, 23);
-            this.doctor2.Name = "doctor2";
-            this.doctor2.Size = new System.Drawing.Size(250, 80);
-            this.doctor2.TabIndex = 1;
-            this.doctor2.TabStop = false;
-            // 
-            // doctor1
-            // 
-            this.doctor1.Location = new System.Drawing.Point(110, 23);
-            this.doctor1.Name = "doctor1";
-            this.doctor1.Size = new System.Drawing.Size(250, 80);
-            this.doctor1.TabIndex = 0;
-            this.doctor1.TabStop = false;
             // 
             // groupBox2
             // 
@@ -120,6 +96,25 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Patients";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(401, 467);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(215, 51);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Add a patient";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // warning
+            // 
+            this.warning.Location = new System.Drawing.Point(363, 448);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(290, 20);
+            this.warning.TabIndex = 3;
+            this.warning.TabStop = false;
             // 
             // patient10
             // 
@@ -186,7 +181,7 @@
             // 
             // patient3
             // 
-            this.patient3.BackgroundImage = global::See_doctors_problem.Resource1.chair;
+            this.patient3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patient3.BackgroundImage")));
             this.patient3.Location = new System.Drawing.Point(431, 53);
             this.patient3.Name = "patient3";
             this.patient3.Size = new System.Drawing.Size(130, 90);
@@ -195,7 +190,7 @@
             // 
             // patient2
             // 
-            this.patient2.BackgroundImage = global::See_doctors_problem.Resource1.chair;
+            this.patient2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patient2.BackgroundImage")));
             this.patient2.Location = new System.Drawing.Point(242, 53);
             this.patient2.Name = "patient2";
             this.patient2.Size = new System.Drawing.Size(130, 90);
@@ -204,31 +199,36 @@
             // 
             // patient1
             // 
-            this.patient1.BackgroundImage = global::See_doctors_problem.Resource1.chair;
+            this.patient1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("patient1.BackgroundImage")));
             this.patient1.Location = new System.Drawing.Point(53, 53);
             this.patient1.Name = "patient1";
             this.patient1.Size = new System.Drawing.Size(130, 90);
             this.patient1.TabIndex = 3;
             this.patient1.TabStop = false;
             // 
-            // button1
+            // doctor3
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(401, 467);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(215, 51);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Add a patient";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.doctor3.Location = new System.Drawing.Point(662, 23);
+            this.doctor3.Name = "doctor3";
+            this.doctor3.Size = new System.Drawing.Size(250, 80);
+            this.doctor3.TabIndex = 2;
+            this.doctor3.TabStop = false;
             // 
-            // warning
+            // doctor2
             // 
-            this.warning.Location = new System.Drawing.Point(363, 448);
-            this.warning.Name = "warning";
-            this.warning.Size = new System.Drawing.Size(290, 20);
-            this.warning.TabIndex = 3;
-            this.warning.TabStop = false;
+            this.doctor2.Location = new System.Drawing.Point(404, 23);
+            this.doctor2.Name = "doctor2";
+            this.doctor2.Size = new System.Drawing.Size(250, 80);
+            this.doctor2.TabIndex = 1;
+            this.doctor2.TabStop = false;
+            // 
+            // doctor1
+            // 
+            this.doctor1.Location = new System.Drawing.Point(144, 23);
+            this.doctor1.Name = "doctor1";
+            this.doctor1.Size = new System.Drawing.Size(250, 80);
+            this.doctor1.TabIndex = 0;
+            this.doctor1.TabStop = false;
             // 
             // See_doctors_problem
             // 
@@ -246,10 +246,8 @@
             this.Text = "See_doctors_problem by CS1504 WangXuSheng";
             this.Load += new System.EventHandler(this.See_doctors_problem_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.doctor3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doctor1)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.warning)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient8)).EndInit();
@@ -260,7 +258,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.patient3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.patient1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.warning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doctor1)).EndInit();
             this.ResumeLayout(false);
 
         }
